@@ -5,6 +5,7 @@
   margin: 0 auto;
   margin-bottom: 30px;
   overflow: hidden;
+  background-color: $white;
   
   p {
     margin-bottom: 0;
@@ -12,13 +13,15 @@
 }
 
 .post-heading {
-  background-color: $white;
   padding: 20px 15px;
 }
 
 .post-info {
-  background-color: $white;
   padding: 20px 15px;
+}
+
+.edit-links {
+  float: right;
 }
 
 .form-wrapper {

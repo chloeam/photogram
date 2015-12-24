@@ -8,4 +8,8 @@
   <div class="post-info">
     <p><%= @post.caption %></p>
   </div>
+  <div class="edit-links">
+    <%= link_to "Edit", edit_post_path(@post), class: "btn btn-default btn-xs" %>
+    <%= link_to "Delete", "#", class: "btn btn-danger btn-xs" %>
+  </div>
 </div>

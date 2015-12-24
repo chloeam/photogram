@@ -1,5 +1,6 @@
 <div class="form-wrapper">
-  <h1>Post a Photo</h1>
+  <h1>Edit Your Photo</h1>
+  <%= image_tag @post.image.url(:medium), class: "image-responsive" %>
   <%= simple_form_for @post do |f| %>
     <div class="form-group"><%= f.input :image %></div>
     <div class="form-group"><%= f.input :caption %></div>
