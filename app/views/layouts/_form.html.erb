@@ -1,0 +1,5 @@
+<%= simple_form_for @post do |f| %>
+  <div class="form-group"><%= f.input :image %></div>
+  <div class="form-group"><%= f.input :caption %></div>
+  <%= f.button :submit, :class => "btn btn-primary" %>
+<% end %>
