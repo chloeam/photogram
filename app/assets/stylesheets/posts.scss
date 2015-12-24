@@ -5,6 +5,7 @@
   margin: 0 auto;
   margin-bottom: 30px;
   overflow: hidden;
+  
   p {
     margin-bottom: 0;
   }
@@ -18,4 +19,17 @@
 .post-info {
   background-color: $white;
   padding: 20px 15px;
+}
+
+.form-wrapper {
+  width: 60%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid $med-gray;
+  border-radius: 3px;
+
+  h1 {
+    text-align: center;
+  }
 }
