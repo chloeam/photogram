@@ -1,0 +1,11 @@
+<div class="post">
+  <div class="post-heading">
+    <p class="name"><%= link_to("Chloe Atchue-Mamlet", "#") %></p>
+  </div>
+  <div class="post-image">
+    <%= image_tag @post.image.url(:medium) %>
+  </div>
+  <div class="post-info">
+    <p><%= @post.caption %></p>
+  </div>
+</div>
