@@ -1,4 +1,4 @@
-class CommentsController < ApplicationControllerj
+class CommentsController < ApplicationController
 
   before_action :set_post
 
@@ -10,16 +10,17 @@ class CommentsController < ApplicationControllerj
     redirect_to root_path
   end
 
-  def create
+  def create  
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
 
     if @comment.save
-      flash[:success] = "Your comment was saved!"
+      flash[:success] = "You commented the hell out of that post!"
       redirect_to :back
     else
-      flash[:alert] = "Something went wrong. Check the comment form."
+      flash[:alert] = "Check the comment form, something went wrong."
       render root_path
+    end
   end
 
   private
