@@ -1,28 +1,3 @@
 <% @posts.each do |post| %>
-  <div class="post">
-    <div class="post-heading">
-      <p class="name"><%= link_to(post.user.user_name, "#") %></p>
-    </div>
-    <div class="post-image">
-      <%= link_to (image_tag post.image.url(:medium), class: "image-responsive"), post_path(post) %>
-    </div>
-    <div class="post-info">
-      <p><%= link_to(post.user.user_name, "#") %> <%= post.caption %></p>
-      <% if post.comments %>
-        <% post.comments.each do |comment| %>
-          <div class="comment">
-            <p><%= comment.user.user_name %> <%= comment.content %></p>
-            <% if comment.user == current_user %>
-              <%= link_to post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" } %>
-            <% end %>
-          </div>
-        <% end %>
-      <% end %>
-      <div class="comment-form">
-        <%= form_for [post, post.comments.new] do |f| %>
-          <%= f.text_field :content, placeholder: "Add a comment..." %>
-        <% end %>
-      </div>
-    </div>
-  </div>
+  <%= render 'post', post: post %>
 <% end %>

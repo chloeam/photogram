@@ -1,13 +1,5 @@
 <div class="post">
-  <div class="post-heading">
-    <p class="name"><%= link_to(@post.user.user_name, "#") %></p>
-  </div>
-  <div class="post-image">
-    <%= image_tag @post.image.url(:medium) %>
-  </div>
-  <div class="post-info">
-    <p><%= @post.caption %></p>
-  </div>
+  <%= render 'post', post: @post %>
   <% if @post.user.id == current_user.id %>
     <div class="edit-links">
       <%= link_to "Edit", edit_post_path(@post), class: "btn btn-default btn-xs" %>
