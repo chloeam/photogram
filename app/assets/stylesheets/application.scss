@@ -21,13 +21,21 @@ $white: #fff;
 $black: #000;
 $light-gray: #f8f8f8;
 $med-gray: #e8e8e8;
+$link-color: #125688;
+
+/* OTHER VARIABLES */
+
+$main-font: proxima-nova, 'Helvetica Neue', Helvetica, sans-serif; 
+
+/* SITEWIDE STYLING */
 
 body {
   background-color: $light-gray;
+  font-family: $main-font;
 }
 
-.navbar {
-  background-color: $white;
+a {
+  color: $link-color;
 }
 
 footer {
@@ -39,4 +47,21 @@ footer {
   border-top: 1px solid $med-gray;
 }
 
+/* NAVBAR CUSTOMIZATIONS */
+
+.navbar-default {
+  background-color: $white;
+  height: 54px;
+  .navbar-nav li a {
+    color: $link-color;
+  }
+}
+
+.navbar-brand {
+  color: $link-color; //not working for some reason
+}
+
+/* IMPORTS */
+
 @import "posts";
+@import "comments";
